@@ -52,8 +52,6 @@ class Item(BaseModel):
 
 @app.post("/predict-taxi-trip")
 async def taxi_trip(item: Item):
-
-
     xgb = load('xgb.joblib')
 
     df = get_dataframe(item)
